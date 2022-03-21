@@ -3,8 +3,6 @@ from .models import gerente
 from .forms import GerenteFormulario , GerenteBusqueda
 
 def crear_gerente(request):
-
-
     if request.method == 'POST':
         form = GerenteFormulario(request.POST)
 
@@ -25,6 +23,5 @@ def lista_gerentes (request):
     else:
         Gerentes = gerente.objects.all()
 
-    Gerentes=None
     form= GerenteBusqueda()
-    return render(request, 'puestosdetrabajoapp/lista_gerentes.html', {'form': form, 'Gerente': Gerentes})
+    return render(request, 'puestosdetrabajoapp/lista_gerentes.html', {'form': form, 'Gerentes': Gerentes})

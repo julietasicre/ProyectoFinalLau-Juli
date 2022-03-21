@@ -6,7 +6,7 @@ class gerente(models.Model):
     dni= models.IntegerField()
     email= models.EmailField()
 
-    def _str_(self):
+    def __str__(self):
         return f'{self.nombre} {self.apellido}'
 
 class reponedor(models.Model):
