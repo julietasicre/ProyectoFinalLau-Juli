@@ -6,6 +6,9 @@ class gerente(models.Model):
     dni= models.IntegerField()
     email= models.EmailField()
 
+    def _str_(self):
+        return f'{self.nombre} {self.apellido}'
+
 class reponedor(models.Model):
     nombre= models.CharField(max_length=50)
     apellido= models.CharField(max_length=50)
